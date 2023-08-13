@@ -1,7 +1,7 @@
 const palindromes = function isPalindrome(string) {
-    reverseString = string.split('').reverse().join('').toLowerCase();
-    originalString = string.toLowerCase();
-    if(originalString == reverseString) return true;
+    const cleanedStr = string.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+    const reverseString = cleanedStr.split('').reverse().join('');
+    if(cleanedStr == reverseString) return true;
     else return false;
 };
 
